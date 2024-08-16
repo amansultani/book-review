@@ -19,6 +19,7 @@ const Book = ({ books }) => {
         content = books.map((book) => (
             <li key={book.id} className="mb-4">
                 <div className="book-item p-4 border rounded shadow-md">
+                    <Link href={route("books.show", { book })} >
                     <div className="flex flex-wrap items-center justify-between">
                         <div className="w-full flex-grow sm:w-auto">
                             <Link
@@ -39,6 +40,7 @@ const Book = ({ books }) => {
                             </div>
                         </div>
                     </div>
+                    </Link>
                 </div>
             </li>
         ));
